@@ -3,6 +3,10 @@ const app = express ()
 const PORT = process.env.PORT || 5000;
 const router = require('./router')
 const cors = require ('cors')
+const db = require('./config/config');
+
+// menyambungkan ke database
+db.connect();
 
 app.use (express.urlencoded({extended:false}))
 
